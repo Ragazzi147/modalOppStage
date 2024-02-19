@@ -1,6 +1,8 @@
-import { LightningElement } from 'lwc';
+import { api } from 'lwc';
+import LightningModal from 'lightning/modal';
 
-export default class ModalEndStage extends LightningElement {
+export default class ModalEndStage extends LightningModal {
+    @api content;
     selectedStatus = '';
     statusOptions = [
         { label: 'Closed Won', value: 'Closed Won' },
@@ -17,4 +19,10 @@ export default class ModalEndStage extends LightningElement {
        
         this.dispatchEvent(new CustomEvent('fechar'));
     }
+
+    handleOkay() {
+        this.close('okay');
+    }
+
+
 }

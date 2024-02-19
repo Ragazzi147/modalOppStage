@@ -1,12 +1,20 @@
 <template>
-    <div class="modal-container">
+    <lightning-modal-header>
+        <div>
+            <h2>Close this Opportunity</h2>
+        </div>
+    </lightning-modal-header>
 
-        <div class="modal-content">
+    <lightning-modal-body>
+        <div>
             <lightning-radio-group label="Status da Oportunidade" value={selectedStatus}
                 options={statusOptions}></lightning-radio-group>
-            <lightning-button label="Confirmar" onclick={confirmar}></lightning-button>
-            <lightning-button label="Cancelar" onclick={fecharModal}></lightning-button>
         </div>
+    </lightning-modal-body>
 
-    </div>
+    <lightning-modal-footer>
+        <button class="slds-button slds-button_neutral" onclick={fecharModal}>Cancel</button>
+        <lightning-button label="Confirmar" onclick={confirmar}></lightning-button>
+        <lightning-button label="OK" onclick={handleOkay}></lightning-button>
+    </lightning-modal-footer>
 </template>
