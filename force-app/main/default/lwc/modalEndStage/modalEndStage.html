@@ -1,0 +1,12 @@
+<template>
+    <div class="modal-container">
+
+        <div class="modal-content">
+            <lightning-radio-group label="Status da Oportunidade" value={selectedStatus}
+                options={statusOptions}></lightning-radio-group>
+            <lightning-button label="Confirmar" onclick={confirmar}></lightning-button>
+            <lightning-button label="Cancelar" onclick={fecharModal}></lightning-button>
+        </div>
+
+    </div>
+</template>
